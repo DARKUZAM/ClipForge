@@ -17,7 +17,7 @@ def available_port() -> int:
 
 def main() -> None:
     port = available_port()
-    config = uvicorn.Config(app, host="127.0.0.1", port=port, log_level="warning", access_log=False)
+    config = uvicorn.Config(app, host="127.0.0.1", port=port, log_level="warning", access_log=False, log_config=None)
     server = uvicorn.Server(config)
     thread = threading.Thread(target=server.run, daemon=True, name="clipforge-api")
     thread.start()

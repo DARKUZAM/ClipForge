@@ -21,3 +21,7 @@ imports/
 models/
 engine/
 updates/
+
+build/
+dist/
+*.spec
